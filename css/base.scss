@@ -1,0 +1,59 @@
+// 変数
+$main-color:#233653;
+$back-color: #EEE9E0;
+$text-size: 0.9rem;
+
+
+// ================================
+// メディアクエリ// ================================
+@mixin pc-layout($width: 1001px) {
+  @media screen and
+  (min-width: $width) {
+      @content;
+  }
+}
+@mixin tab-layout($width: 1000px) {
+  @media screen and
+  (max-width: $width) {
+      @content;
+  }
+}
+@mixin sp-layout($width: 480px) {
+  @media screen and
+  (max-width: $width) {
+      @content;
+  }
+}
+
+
+
+html, body {
+  scroll-behavior: smooth;
+  color: #333;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  -webkit-font-feature-settings: "palt";
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "palt";
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,h1,h2,h3,h4,h5,h6,p,ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin three-line {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color:#0097A7;
+  position: fixed;
+}

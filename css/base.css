@@ -1,0 +1,22 @@
+html, body {
+  scroll-behavior: smooth;
+  color: #333;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  -webkit-font-feature-settings: "palt";
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "palt";
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+/*# sourceMappingURL=base.css.map */
