@@ -81,10 +81,10 @@ require ('./templates/layout.php');
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
         <?php foreach ($outer as $loop): ?>
-        <dl><?php echo $loop->{'brand'}->{'name'} ?></dl>
-        <dt><?php echo $loop->{'model'} ?></dt>
-        <img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>" alt="">
-      <?php endforeach; ?>
+          <dl><?php echo $loop->{'brand'}->{'name'} ?></dl>
+          <dt><?php echo $loop->{'model'} ?></dt>
+          <img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>" alt="">
+        <?php endforeach; ?>
       <?php endforeach; ?>
 
     <a href="./select.php">
