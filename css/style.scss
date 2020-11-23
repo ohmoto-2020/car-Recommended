@@ -89,6 +89,7 @@ body {
     }
     .show {
       position: fixed;
+      z-index: 10;
       top: 0px;
       right: 0px;
       width: 100px;
@@ -178,14 +179,20 @@ body {
 // ================================
 .index-main {
   width: 100%;
+  position: fixed;
+  top: 10%;
   &__trouble {
     padding: 0 1rem;
     &__title {
-      margin-top: 7rem;
-      font-size: 2.5rem;
+      font-size: 8vw;
+    }
+    &__explanation {
+      margin-top: 4%;
+      font-size: 3vw;
     }
     &__contents {
-      margin-top: 3rem;
+      margin-top: 10%;
+      font-size: 4vw;
       text-align: center;
     }
   }
@@ -194,7 +201,6 @@ body {
     top: 50%;
     left: 10%;
     width: 80%;
-    z-index: -1;
     &__induction {
       text-align: center;
     }
