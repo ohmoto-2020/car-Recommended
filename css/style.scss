@@ -2,10 +2,9 @@
 
 body {
   width: 100%;
-  background-image: url("../image/S__117366799.jpg");
-  background-size: cover;
-  background-color:rgba(255,255,255,0.7);
-  background-blend-mode:lighten;
+  height: 100vh;
+  background-image: url("../img 2/sp_bg.jpg");
+  background-size: cover;  background-blend-mode:lighten;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -14,7 +13,6 @@ body {
 // 登録・ログインのヘッダー
 // ================================
 .info-header {
-  background-color: rgba(228, 228, 228, 0.6);
   padding: 1rem 0;
   &__container {
     text-align: center;
@@ -27,53 +25,76 @@ body {
 // 主ページのヘッダー
 // ================================
 .header {
-  background-color: rgba(228, 228, 228, 0.6);
-  padding: 1rem 0;
+  padding: 0.8rem 0.8rem;
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     h1 {
-      font-size: 3.5rem;
+      font-size: 1.2rem;
       @include tab-layout(){
         font-size: 3rem;
       }
     }
     &__hamburger {
+      border: none;
+      position: fixed;
+      width: 30px;
+      height: 17px;
+      right: 20px;
+      top: 12px;
+      cursor: pointer;
+      background-color: rgb(10,184,183);
       span {
-        content: "";
-        top: 5%;
-        right: 5%;
+        top: 0px;
         @include three-line;
         &::before {
-          content: "";
-          top: 6%;
-          right: 5%;
+          top: 7px;
           @include three-line;
         }
         &::after {
-          content: "";
-          top: 7%;
-          right: 5%;
+          top: 14px;
           @include three-line;
         }
       }
     }
     ul {
+      color: $sub-color;
       display: flex;
       flex-direction: column;
       text-align: center;
       list-style: none;
+      .welcom {
+        padding-top: 4rem;
+      }
+      :nth-child(4) {
+        font-size: 1.5rem;
+        margin-top: 11rem;
+        color: red;
+        cursor: pointer;
+      }
       li {
+        padding-top: 1rem;
         font-size: 0.5vw;
-        a {
-          color: #000;
-        }
         a:hover {
           color: red;
           transition: 0.4s;
         }
       }
+    }
+    .hide {
+      position: fixed;
+      top: 0px;
+      right: -200px;
+    }
+    .show {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 -2px 14px rgba(0,0,0,0.3);
     }
   }
 }
@@ -83,12 +104,6 @@ body {
 // ================================
 .info-main {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  @include pc-layout(){
-    width: 1024px;
-    margin: 3rem auto 5rem;
-  }
   &__container {
     width: 100%;
     display: flex;
@@ -97,23 +112,14 @@ body {
     &__title {
       margin-bottom: 1rem;
       font-size: 7vw;
-      @include pc-layout(){
-        font-size: 5rem;
-      }
     }
     &__subTitle {
       font-size: 4vw;
       margin-bottom: 3rem;
-      @include pc-layout(){
-        font-size: 2rem;
-      }
     }
     &__form {
       text-align: center;
       width: 70%;
-      @include pc-layout(){
-        width: 98%;
-      }
       li {
         list-style: none;
         display: flex;
@@ -172,30 +178,53 @@ body {
 // ================================
 .index-main {
   width: 100%;
-  height: 600px;
-  margin-top: 5rem;
-  &__search {
-    user-select: none;
-    display: block;
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    margin: 5rem auto 3rem;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: lighter;
-    line-height: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 150px;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-      transition: 0.2s;
+  &__trouble {
+    padding: 0 1rem;
+    &__title {
+      margin-top: 7rem;
+      font-size: 2.5rem;
+    }
+    &__contents {
+      margin-top: 3rem;
+      text-align: center;
     }
   }
+  &__search {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    z-index: -1;
+    &__induction {
+      text-align: center;
+    }
+    &__button{
+      user-select: none;
+      display: block;
+      height: 60px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: $sub-color;
+      line-height: 60px;
+      background-color: rgb(252, 227, 0);
+      border-radius: 150px;
+      &:hover {
+        background-color: rgba(255, 238, 0, 0.5);
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+// ================================
+// select.php
+// ================================
+.select-main {
   .select {
     margin: 6rem 0 3rem 12rem;
     p {
-      font-family: "MS Pゴシック";
       font-weight: bold;
       font-size: 3rem;
       color: blue;

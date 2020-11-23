@@ -1,7 +1,7 @@
 // 変数
-$main-color:#233653;
-$back-color: #EEE9E0;
-$text-size: 0.9rem;
+$main-color:#fff;
+$sub-color: #000;
+$text-size: 1rem;
 
 
 // ================================
@@ -12,9 +12,9 @@ $text-size: 0.9rem;
       @content;
   }
 }
-@mixin tab-layout($width: 1000px) {
+@mixin tab-layout($width: 540px) {
   @media screen and
-  (max-width: $width) {
+  (min-width: $width) {
       @content;
   }
 }
@@ -29,15 +29,15 @@ $text-size: 0.9rem;
 
 html, body {
   scroll-behavior: smooth;
-  color: #333;
+  color: $main-color;
   letter-spacing: 0.1rem;
   line-height: 1.7;
   -webkit-font-feature-settings: "palt";
   -webkit-text-size-adjust: 100%;
   font-feature-settings: "palt";
-  font-family: 'Sawarabi Mincho', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   box-sizing: border-box;
 }
 
@@ -48,12 +48,14 @@ html, body {
 
 a {
   text-decoration: none;
+  color: $sub-color;
 }
 
 @mixin three-line {
   content: "";
-  width: 40px;
-  height: 4px;
-  background-color:#0097A7;
-  position: fixed;
+  right: 0;
+  width: 30px;
+  height: 3px;
+  background-color: $main-color;
+  position: absolute;
 }

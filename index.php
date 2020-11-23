@@ -26,14 +26,25 @@ require ('./templates/layout.php');
 
   <main class="index-main">
     <div class="index-main__trouble">
-      <p class="index-main__trouble__top">どんな車があるの？<br>車が欲しいけど調べ方がわからない...<br>特徴だけで探したい！</p>
-      <p class="index-main__trouble__bottom">あなたの条件に合った車を紹介します！</p>
+      <p class="index-main__trouble__title">車に一目惚れしよう</p>
+      <p class="index-main__trouble__explanation">この世にある車全てを把握できている人はどのくらいいるでしょうか。<br>まだあなたはトキメクような車に出会っていないかもしれません。</p>
+      <p class="index-main__trouble__contents">どんな車があるの？<br>車が欲しいけど調べ方がわからない...<br>特徴だけで探したい！</p>
     </div>
-    <a href="select.php" class="index-main__search">START!</a>
+    <div class="index-main__search">
+      <p class="index-main__search__induction">&#9661;下をクリック&#9661;</p>
+      <a href="select.php" class="index-main__search__button">START</a>
+    </div>
   </main>
 
-  <footer>
-    <p>Car - Recommended</p>
-  </footer>
+  <!-- ハンバーガーのクラス変更 -->
+  <script>
+    function toggle(){
+      if(document.getElementById('hum').className === "show") {
+          document.getElementById('hum').className = "hide";
+      } else {
+          document.getElementById('hum').className = "show";
+      }
+    }
+  </script>
 </body>
 </html>

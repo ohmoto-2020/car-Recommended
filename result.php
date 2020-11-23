@@ -92,8 +92,5 @@ require ('./templates/layout.php');
     </a>
   </main>
 
-  <footer>
-    <p>Car - Recommended</p>
-  </footer>
 </body>
 </html>

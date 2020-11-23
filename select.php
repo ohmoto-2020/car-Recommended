@@ -52,8 +52,5 @@ require ('./templates/layout.php');
     </div>
   </main>
 
-  <footer>
-    <p>Car - Recommended</p>
-  </footer>
 </body>
 </html>
