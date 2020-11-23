@@ -46,6 +46,17 @@ require ('./templates/layout.php');
             <option value="国産車">国産車</option>
             <option value="外車">外車</option>
           </select>
+          <p>用途</p>
+          <select name="uses">
+            <option value="街乗り">街乗り</option>
+            <option value="アウトドア">アウトドア</option>
+            <option value="スポーツ">スポーツ</option>
+          </select>
+          <p>燃費</p>
+          <select name="economy">
+            <option value="良い">良い&#40;実燃費15km/L〜&#41;</option>
+            <option value="気にしない">気にしない</option>
+          </select>
           <button type="submit" class="next" value="次へ">次へ>>></button>
         </form>
       </div>

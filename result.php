@@ -20,6 +20,8 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 $search_style = $_POST["style"];
 $search_size = $_POST["size"];
 $search_country = $_POST["country"];
+$search_uses = $_POST["uses"];
+$search_economy = $_POST["economy"];
 
 $sql = "SELECT * FROM cars WHERE style=:style AND size=:size AND country=:country";
 
@@ -28,6 +30,8 @@ $stmh = $db->prepare($sql);
 $stmh->bindValue(':style', $search_style, PDO::PARAM_STR);
 $stmh->bindValue(':size', $search_size, PDO::PARAM_STR);
 $stmh->bindValue(':country', $search_country, PDO::PARAM_STR);
+$stmh->bindValue(':uses', $search_uses, PDO::PARAM_STR);
+$stmh->bindValue(':economy', $search_economy, PDO::PARAM_STR);
 $stmh->execute();
 
 
@@ -81,8 +85,9 @@ require ('./templates/layout.php');
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
         <?php foreach ($outer as $loop): ?>
-          <dl><?php echo $loop->{'brand'}->{'name'} ?></dl>
-          <dt><?php echo $loop->{'model'} ?></dt>
+          <p>メーカー:<?php echo $loop->{'brand'}->{'name'} ?></p>
+          <p>車種名:<?php echo $loop->{'model'} ?></p>
+          <p>燃費:<?php ?>km/L</p>
           <img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>" alt="">
         <?php endforeach; ?>
       <?php endforeach; ?>
@@ -92,5 +97,15 @@ require ('./templates/layout.php');
     </a>
   </main>
 
+  <!-- ハンバーガーのクラス変更 -->
+  <script>
+    function toggle(){
+      if(document.getElementById('hum').className === "show") {
+          document.getElementById('hum').className = "hide";
+      } else {
+          document.getElementById('hum').className = "show";
+      }
+    }
+  </script>
 </body>
 </html>

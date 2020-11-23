@@ -7,38 +7,51 @@ create table cars (
   price VARCHAR(255),
   style VARCHAR(255),
   size VARCHAR(255),
-  country VARCHAR(255));
+  country VARCHAR(255),
+  uses VARCHAR(255),
+  economy VARCHAR(255));
 
 insert into
- cars(name,maker,price,style,size,country)
+ cars(name,maker,price,style,size,country,uses,economy)
   values(
+  -- トヨタ
   'エクストレイル',
   'NI',
   '250~400',
   'かっこいい',
   'おおきめ',
-  '国産車'),
+  '国産車',
+  'アウトドア',
+  '11'),
   ('A4',
   'AD',
   '450~600',
   'かっこいい',
   'ふつう',
-  '外車'),
+  '外車',
+  '街乗り',
+  '11'),
   ('Aクラス',
   'ME',
   '400~500',
   'かっこいい',
   'ふつう',
-  '外車'),
+  '外車',
+  '街乗り',
+  '11'),
   ('1シリーズ',
   'BM',
   '400~500',
   'かっこいい',
   'ふつう',
-  '外車'),
+  '外車',
+  '街乗り',
+  '11'),
   ('タント',
   'DA',
   '100~200',
   'かわいい',
   'ちいさめ',
-  '国産車');
+  '国産車',
+  '街乗り',
+  '11');

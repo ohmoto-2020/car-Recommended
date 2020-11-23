@@ -67,9 +67,10 @@ body {
       .welcom {
         padding-top: 4rem;
       }
-      :nth-child(4) {
+      :nth-child(6) {
         font-size: 1.5rem;
         margin-top: 11rem;
+        padding-bottom: 2rem;
         color: red;
         cursor: pointer;
       }
@@ -92,7 +93,7 @@ body {
       z-index: 10;
       top: 0px;
       right: 0px;
-      width: 100px;
+      width: 110px;
       height: 100%;
       background-color: rgb(255, 255, 255);
       box-shadow: 0 -2px 14px rgba(0,0,0,0.3);
@@ -217,7 +218,7 @@ body {
       background-color: rgb(252, 227, 0);
       border-radius: 150px;
       &:hover {
-        background-color: rgba(255, 238, 0, 0.5);
+        background-color: rgba(255, 238, 0, 0.9);
         transition: 0.2s;
       }
     }
@@ -278,8 +279,12 @@ body {
 // ================================
 
 
+// ================================
+// about.php
+// ================================
+.about-main {
 
-
+}
 
 
 // ================================

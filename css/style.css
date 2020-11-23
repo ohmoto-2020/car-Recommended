@@ -99,9 +99,10 @@ body {
       list-style: none; }
       .header__container ul .welcom {
         padding-top: 4rem; }
-      .header__container ul :nth-child(4) {
+      .header__container ul :nth-child(6) {
         font-size: 1.5rem;
         margin-top: 11rem;
+        padding-bottom: 2rem;
         color: red;
         cursor: pointer; }
       .header__container ul li {
@@ -120,7 +121,7 @@ body {
       z-index: 10;
       top: 0px;
       right: 0px;
-      width: 100px;
+      width: 110px;
       height: 100%;
       background-color: white;
       -webkit-box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.3);
@@ -239,7 +240,7 @@ body {
       background-color: #fce300;
       border-radius: 150px; }
       .index-main__search__button:hover {
-        background-color: rgba(255, 238, 0, 0.5);
+        background-color: rgba(255, 238, 0, 0.9);
         -webkit-transition: 0.2s;
         transition: 0.2s; }
 
