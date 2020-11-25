@@ -39,7 +39,7 @@ if (!empty($_POST)) {
 $title = "車診断 ログインページ";
 require ('./templates/layout.php');
 ?>
-
+<body class="body">
   <header class="info-header">
     <?php require('templates/classic-header.php'); ?>
   </header>

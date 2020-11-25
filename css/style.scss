@@ -1,6 +1,6 @@
 @import "base.scss";
 
-body {
+.body {
   width: 100%;
   height: 100vh;
   background-image: url("../img 2/sp_bg.jpg");
@@ -8,6 +8,9 @@ body {
   background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-position: center;
+}
+.result-body {
+  background-color: rgb(10,184,183)!important;
 }
 
 // ================================
@@ -238,10 +241,6 @@ body {
   &__container {
     background-color: $main-color;
     box-shadow: 0 0 8px #000;
-    &__box {
-      &__item {
-      }
-    }
   }
 }
 
@@ -249,29 +248,48 @@ body {
 // result.php
 // ================================
 .result-main {
-  background-color: rgb(10,184,183)!important;
   height: 100vh;
+  margin-top: 2rem;
+  text-align: center;
+  .slider {
+    width: 80%;
+    margin: 0 auto;
+    .oneCar {
+      width: 100%;
+
+      ul {
+        list-style: none;
+      }
+      img {
+        width: 200px;
+        margin: 0 auto;
+      }
+    }
+    .slick-prev::before,
+    .slick-next::before {
+      color: black !important;
+    }
+  }
+  .search {
+    user-select: none;
+    display: block;
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    margin: 5rem auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $sub-color;
+    line-height: 40px;
+    background-color: rgb(252, 227, 0);
+    border-radius: 150px;
+    &:hover {
+      background-color: rgba(255, 238, 0, 0.9);
+      transition: 0.2s;
+    }
+  }
 }
 
-.slider {
-  width: 80%;
-  margin: 0 auto;
-  .oneCar {
-    width: 100%;
-    text-align: center;
-    ul {
-      list-style: none;
-    }
-    img {
-      width: 200px;
-      margin: 0 auto;
-    }
-  }
-  .slick-prev::before,
-  .slick-next::before {
-    color: black !important;
-  }
-}
 
 // ================================
 // about.php

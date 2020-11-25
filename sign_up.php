@@ -51,7 +51,7 @@ if (!empty($_POST)) {
 $title = "車診断 新規会員登録ページ";
 require ('./templates/layout.php');
 ?>
-
+<body class="body">
   <header class="info-header">
     <?php require('templates/classic-header.php'); ?>
   </header>

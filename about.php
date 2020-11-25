@@ -20,8 +20,8 @@ $title = "車診断 このサイトについて";
 require ('./templates/layout.php');
 ?>
 
-
-<header class="header">
+<body class="body">
+  <header class="header">
     <?php require('templates/home-header.php'); ?>
   </header>
 

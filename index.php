@@ -19,7 +19,7 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 $title = "車診断 トップページ";
 require ('./templates/layout.php');
 ?>
-
+<body class="body">
   <header class="header">
     <?php require('templates/home-header.php'); ?>
   </header>

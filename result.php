@@ -75,19 +75,19 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 $title = "車診断 結果";
 require ('./templates/layout.php');
 ?>
-
-<header class="header">
+<body class="result-body">
+  <header class="header">
     <?php require('templates/home-header.php'); ?>
   </header>
 
   <main class="result-main">
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
+        <p>メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
+        <p>車種名:<?php echo $outer[0]->{'model'} ?></p>
         <div class="slider">
         <?php foreach ($outer as $loop): ?>
           <div class="oneCar">
-            <p>メーカー:<?php echo $loop->{'brand'}->{'name'} ?></p>
-            <p>車種名:<?php echo $loop->{'model'} ?></p>
             <ul>
               <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>"></li>
             </ul>
@@ -95,9 +95,8 @@ require ('./templates/layout.php');
         <?php endforeach; ?>
         </div>
       <?php endforeach; ?>
-
     <a href="./select.php">
-      <div class="search">RESTART!</div>
+      <div class="search">RESTART</div>
     </a>
   </main>
 

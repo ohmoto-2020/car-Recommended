@@ -1,5 +1,4 @@
 <?php
-
 //登録人数の表示
 $count = $db->query('SELECT COUNT(*) FROM members');
 ?>

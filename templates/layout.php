@@ -12,5 +12,3 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
   <title><?= $title ?></title>
 </head>
-
-<body>
