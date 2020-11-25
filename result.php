@@ -21,9 +21,8 @@ $search_style = $_POST["style"];
 $search_size = $_POST["size"];
 $search_country = $_POST["country"];
 $search_uses = $_POST["uses"];
-$search_economy = $_POST["economy"];
 
-$sql = "SELECT * FROM cars WHERE style=:style AND size=:size AND country=:country";
+$sql = "SELECT * FROM cars WHERE style=:style AND size=:size AND country=:country AND uses=:uses";
 
 // 上のSQLにフォーム情報を埋め込み
 $stmh = $db->prepare($sql);
@@ -31,8 +30,8 @@ $stmh->bindValue(':style', $search_style, PDO::PARAM_STR);
 $stmh->bindValue(':size', $search_size, PDO::PARAM_STR);
 $stmh->bindValue(':country', $search_country, PDO::PARAM_STR);
 $stmh->bindValue(':uses', $search_uses, PDO::PARAM_STR);
-$stmh->bindValue(':economy', $search_economy, PDO::PARAM_STR);
 $stmh->execute();
+
 
 
 //API
@@ -77,19 +76,24 @@ $title = "車診断 結果";
 require ('./templates/layout.php');
 ?>
 
-  <header class="header">
+<header class="header">
     <?php require('templates/home-header.php'); ?>
   </header>
 
-  <main>
+  <main class="result-main">
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
+        <div class="slider">
         <?php foreach ($outer as $loop): ?>
-          <p>メーカー:<?php echo $loop->{'brand'}->{'name'} ?></p>
-          <p>車種名:<?php echo $loop->{'model'} ?></p>
-          <p>燃費:<?php ?>km/L</p>
-          <img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>" alt="">
+          <div class="oneCar">
+            <p>メーカー:<?php echo $loop->{'brand'}->{'name'} ?></p>
+            <p>車種名:<?php echo $loop->{'model'} ?></p>
+            <ul>
+              <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>"></li>
+            </ul>
+          </div>
         <?php endforeach; ?>
+        </div>
       <?php endforeach; ?>
 
     <a href="./select.php">
@@ -97,15 +101,21 @@ require ('./templates/layout.php');
     </a>
   </main>
 
+
   <!-- ハンバーガーのクラス変更 -->
   <script>
     function toggle(){
       if(document.getElementById('hum').className === "show") {
-          document.getElementById('hum').className = "hide";
+        document.getElementById('hum').className = "hide";
       } else {
-          document.getElementById('hum').className = "show";
+        document.getElementById('hum').className = "show";
       }
     }
-  </script>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 </html>

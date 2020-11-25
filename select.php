@@ -25,37 +25,33 @@ require ('./templates/layout.php');
   </header>
 
   <main>
-    <div class="select">
-      <div class="select__container">
-        <form action="result.php" class="select__container__box" method="POST">
+    <div class="select-main">
+      <div class="select-main__container">
+        <form action="result.php" class="select-main__container__box" method="POST">
           <p>スタイル</p>
-          <select name="style">
+          <select class="select-main__container__box__item" name="style">
             <option value="かわいい">かわいい</option>
             <option value="かっこいい">かっこいい</option>
             <option value="おしゃれ">おしゃれ</option>
             <option value="レトロ">レトロ</option>
           </select>
           <p>サイズ</p>
-          <select name="size">
-            <option value="おおきめ">おおきめ</option>
-            <option value="ちいさめ">ちいさめ</option>
+          <select class="select-main__container__box__item" name="size">
             <option value="ふつう">ふつう</option>
+            <option value="すごくおおきい">すごくおおきい</option>
+            <option value="おおきい">おおきい</option>
+            <option value="ちいさい">ちいさい</option>
           </select>
           <p>国</p>
-          <select name="country">
+          <select class="select-main__container__box__item" name="country">
             <option value="国産車">国産車</option>
             <option value="外車">外車</option>
           </select>
           <p>用途</p>
-          <select name="uses">
+          <select class="select-main__container__box__item" name="uses">
             <option value="街乗り">街乗り</option>
             <option value="アウトドア">アウトドア</option>
             <option value="スポーツ">スポーツ</option>
-          </select>
-          <p>燃費</p>
-          <select name="economy">
-            <option value="良い">良い&#40;実燃費15km/L〜&#41;</option>
-            <option value="気にしない">気にしない</option>
           </select>
           <button type="submit" class="next" value="次へ">次へ>>></button>
         </form>
