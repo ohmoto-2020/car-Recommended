@@ -3,10 +3,10 @@ ini_set('display_errors', '1');
 require('./templates/config.php');
 session_start();
 
-// if ($_COOKIE['email'] != '') {
-//   $_POST['email'] = $_COOKIE['email'];
-//   $_POST['password'] = $_COOKIE['password'];
-// }
+if ($_COOKIE['email'] != '') {
+  $_POST['email'] = $_COOKIE['email'];
+  $_POST['password'] = $_COOKIE['password'];
+}
 
 if (!empty($_POST)) {
 // ログインの処理
