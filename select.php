@@ -32,6 +32,7 @@ require ('./templates/layout.php');
           <select class="select-main__container__box__item" name="style">
             <option value="かわいい">かわいい</option>
             <option value="かっこいい">かっこいい</option>
+            <option value="シンプル">シンプル</option>
             <option value="おしゃれ">おしゃれ</option>
             <option value="レトロ">レトロ</option>
           </select>

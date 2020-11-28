@@ -102,14 +102,14 @@ require ('./templates/layout.php');
 
 
   <!-- ハンバーガーのクラス変更 -->
-  <script>
-    function toggle(){
-      if(document.getElementById('hum').className === "show") {
-        document.getElementById('hum').className = "hide";
-      } else {
-        document.getElementById('hum').className = "show";
+    <script>
+      function toggle(){
+        if(document.getElementById('hum').className === "show") {
+          document.getElementById('hum').className = "hide";
+        } else {
+          document.getElementById('hum').className = "show";
+        }
       }
-    }
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

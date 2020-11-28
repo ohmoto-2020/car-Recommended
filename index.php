@@ -12,8 +12,8 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
   $member = $members->fetch();
 } else {
   //ログインしてない
-  header('Location: login.php');
-  exit();
+  // header('Location: login.php');
+  // exit();
 }
 
 $title = "車診断 トップページ";
