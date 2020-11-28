@@ -10,11 +10,12 @@ if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
   $members = $db->prepare('SELECT * FROM members WHERE id=?');
   $members->execute(array($_SESSION['id']));
   $member = $members->fetch();
-} else {
+}
+// } else {
   //ログインしてない
   // header('Location: login.php');
   // exit();
-}
+// }
 
 $title = "車診断 トップページ";
 require ('./templates/layout.php');
