@@ -55,11 +55,12 @@ require ('./templates/layout.php');
         <ul>
           <li>
             <label for="email" class="user-info">メールアドレス:</label>
-            <input type="email" class="user-info" name="email" value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES); ?>">
+            <input type="email" class="user-info" name="email" value="
+            <?php empty($POST['email']) ? print htmlspecialchars($_POST['email'], ENT_QUOTES):''; ?>">
           </li>
           <li>
             <label for="password" class="user-info">パスワード:</label>
-            <input type="password" class="user-info" name="password" value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
+            <input type="password" class="user-info" name="password" value="<?php empty($POST['email']) ? print htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
           </li>
         </ul>
         <?php if ($error['login'] == 'blank'): ?>
