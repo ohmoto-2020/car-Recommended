@@ -64,6 +64,7 @@ require ('./templates/layout.php');
             <input type="password" class="user-info" name="password" value="<?php !empty($POST['email']) ? print htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
           </li>
         </ul>
+        <?php var_dump($error) ?>
         <?php if ($error['login'] == 'blank'): ?>
           <p class="error">メールアドレスとパスワードをご記入ください</p>
         <?php endif; ?>
