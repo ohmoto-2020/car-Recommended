@@ -42,7 +42,7 @@ if (!empty($_POST)) {
       ));
       unset($_SESSION['join']);
 
-      header('Location: index.php');
+      header('Location: login.php');
       exit();
     }
   }
