@@ -1,16 +1,17 @@
 <?php
-ini_set('display_errors', '1');
+ini_set('display_errors', '1');//本番環境では0
+error_reporting(E_ALL);//本番環境ではコメントアウト
 require('./templates/config.php');
 session_start();
 
-if ($_COOKIE['email'] != '') {
+if (isset($_COOKIE['email']) && !empty($_COOKIE['email'])) {
   $_POST['email'] = $_COOKIE['email'];
   $_POST['password'] = $_COOKIE['password'];
 }
 
-$error = array();
+// $error=array();
 if (!empty($_POST)) {
-// ログインの処理
+  // ログインの処理
   if ($_POST['email'] != '' && $_POST['password'] != '') {
     $login = $db->prepare('SELECT * FROM members WHERE email=? AND password=?');
     $login->execute(array(
@@ -37,7 +38,7 @@ if (!empty($_POST)) {
   }
 }
 
-$title = "車診断 ログインページ";
+$title = "クルシラ ログインページ";
 require ('./templates/layout.php');
 ?>
 <body class="body">
@@ -55,26 +56,24 @@ require ('./templates/layout.php');
       <form action="login.php" method="post" class="info-main__container__form">
         <ul>
           <li>
-            <label for="email" class="user-info">メールアドレス:</label>
+            <label for="email" class="user-info">メールアドレス</label>
             <input type="email" class="user-info" name="email" value="
-            <?php !empty($POST['email']) ? print htmlspecialchars($_POST['email'], ENT_QUOTES):''; ?>">
+            <?php print !empty($_POST['email']) ? htmlspecialchars($_POST['email'], ENT_QUOTES):''; ?>">
           </li>
           <li>
-            <label for="password" class="user-info">パスワード:</label>
-            <input type="password" class="user-info" name="password" value="<?php !empty($POST['email']) ? print htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
+            <label for="password" class="user-info">パスワード</label>
+            <input type="password" class="user-info" name="password" value="<?php print !empty($_POST['password']) ? htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
           </li>
         </ul>
-        <?php var_dump($error) ?>
-        <?php if ($error['login'] == 'blank'): ?>
+        <?php if (isset($error['login']) && $error['login'] ==  'blank'): ?>
           <p class="error">メールアドレスとパスワードをご記入ください</p>
         <?php endif; ?>
-        <?php if ($error['login'] == 'failed'): ?>
+        <?php if (isset($error['login']) && $error['login'] == 'failed'): ?>
           <p class="error">ログインに失敗しました。正しくご記入ください。</p>
         <?php endif; ?>
-        <button type="submit" class="info-main__container__form__button">ログインする</button>
+        <button type="submit" class="info-main__container__form__button">ログイン</button>
       </form>
     </div>
   </main>
-
 </body>
 </html>

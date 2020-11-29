@@ -17,11 +17,16 @@
 // 登録・ログインのヘッダー
 // ================================
 .info-header {
+  background-color: rgb(7, 128, 128);
   padding: 1rem 0;
   &__container {
     text-align: center;
     h1 {
+      letter-spacing: 0.5rem;
       font-size: 5vw;
+    }
+    .header-link {
+      color: $main-color !important;
     }
   }
 }
@@ -30,15 +35,20 @@
 // ================================
 .header {
   padding: 0.8rem 0.8rem;
+  background-color: rgb(7, 128, 128);
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     h1 {
-      font-size: 1.2rem;
+      font-size: 5vw;
+      letter-spacing: 0.5rem;
       @include tab-layout() {
         font-size: 3rem;
       }
+    }
+    .header-link {
+      color: $main-color !important;
     }
     &__hamburger {
       border: none;
@@ -48,7 +58,7 @@
       right: 20px;
       top: 12px;
       cursor: pointer;
-      background-color: rgb(10, 184, 183);
+      background-color: rgb(7, 128, 128);
       span {
         top: 0px;
         @include three-line;
@@ -71,9 +81,9 @@
       .welcom {
         padding-top: 4rem;
       }
-      :nth-child(6) {
+      :nth-child(5) {
         font-size: 1.5rem;
-        margin-top: 11rem;
+        margin-top: 10rem;
         padding-bottom: 2rem;
         color: red;
         cursor: pointer;
@@ -116,12 +126,12 @@
     flex-direction: column;
     align-items: center;
     &__title {
+      margin-top: 3rem;
       margin-bottom: 1rem;
       font-size: 7vw;
     }
     &__subTitle {
       font-size: 4vw;
-      margin-bottom: 3rem;
     }
     &__form {
       text-align: center;
@@ -132,10 +142,10 @@
         flex-direction: column;
         @include pc-layout() {
           flex-direction: row;
-          margin-top: 2rem;
+          margin-top: 1rem;
         }
         label {
-          margin-top: 2rem;
+          margin-top: 1rem;
           @include pc-layout() {
             width: 35%;
             margin-top: 0;
@@ -157,8 +167,8 @@
       &__button {
         letter-spacing: 3px;
         font-size: 4vw;
-        width: 50%;
-        margin-top: 3rem;
+        width: 45%;
+        margin-top: 1rem;
         padding: 0.5rem;
         @include pc-layout() {
           font-size: 2rem;
@@ -186,7 +196,9 @@
   width: 100%;
   position: fixed;
   top: 10%;
+  text-align: center;
   &__trouble {
+    margin-top: 2rem;
     padding: 0 1rem;
     &__title {
       font-size: 8vw;
@@ -198,13 +210,11 @@
     &__contents {
       margin-top: 10%;
       font-size: 4vw;
-      text-align: center;
+
     }
   }
   &__search {
-    position: fixed;
-    top: 50%;
-    left: 10%;
+    margin: 2.5rem auto 0;
     width: 80%;
     &__induction {
       text-align: center;
@@ -233,14 +243,44 @@
 // select.php
 // ================================
 .select-main {
-  background-color: rgb(32, 75, 55);
-  color: $sub-color;
+  color: $main-color;
   margin: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 0 5px #000;
   &__container {
-    background-color: $main-color;
-    box-shadow: 0 0 8px #000;
+    &__box {
+      padding: 1rem;
+      border: solid 5px $main-color;
+      &__item {
+        padding-bottom: 1rem;
+        display: flex;
+        text-align: right;
+        &__title {
+          width: 20%;
+          padding-right: 1rem;
+        }
+        &__select {
+          width: 70%;
+        }
+      }
+    }
+    &__next {
+      margin: 2rem auto 0;
+      display: block;
+      user-select: none;
+      height: 50px;
+      width: 120px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: $sub-color;
+      line-height: 50px;
+      background-color: rgb(252, 227, 0);
+      border-radius: 120px;
+      border: none;
+      &:hover {
+        background-color: rgba(255, 238, 0, 0.9);
+        transition: 0.2s;
+      }
+    }
   }
 }
 
@@ -249,14 +289,24 @@
 // ================================
 .result-main {
   height: 100vh;
-  margin-top: 2rem;
+  margin-top: 4rem;
   text-align: center;
+  h2 {
+    margin: 0 20px;
+    font-size: 2rem;
+    border-bottom: 4px solid rgb(7, 128, 128);
+  }
+  .maker {
+    margin-top: 3rem;
+  }
+  .car-name {
+    font-size: 1.3rem;
+  }
   .slider {
     width: 80%;
     margin: 0 auto;
     .oneCar {
       width: 100%;
-
       ul {
         list-style: none;
       }

@@ -48,7 +48,7 @@ if (!empty($_POST)) {
   }
 }
 
-$title = "車診断 新規会員登録ページ";
+$title = "クルシラ 新規会員登録ページ";
 require ('./templates/layout.php');
 ?>
 <body class="body">
@@ -62,14 +62,14 @@ require ('./templates/layout.php');
       <form action="sign_up.php" method="post" class="info-main__container__form">
         <ul>
           <li>
-            <label for="name" class="user-info">ニックネーム:</label>
+            <label for="name" class="user-info">ニックネーム</label>
             <input type="name" class="user-info" name="name" value="<?php echo htmlspecialchars($_POST['name'], ENT_QUOTES); ?>">
           </li>
           <?php if ($error['name'] == 'blank'): ?>
           <p class="error">ニックネームを入力してください</p>
           <?php endif; ?>
           <li>
-            <label for="email" class="user-info">メールアドレス:</label>
+            <label for="email" class="user-info">メールアドレス</label>
             <input type="email" class="user-info" name="email"  value="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES); ?>">
           </li>
           <?php if ($error['email'] == 'blank'): ?>
@@ -79,7 +79,7 @@ require ('./templates/layout.php');
           <p class="error">指定されたメールアドレスはすでに登録されています</p>
           <?php endif; ?>
           <li>
-            <label for="password" class="user-info">パスワード:</label>
+            <label for="password" class="user-info">パスワード</label>
             <input type="password" class="user-info" name="password"  value="<?php echo htmlspecialchars($_POST['password'], ENT_QUOTES); ?>">
           </li>
           <?php if ($error['password'] == 'blank'): ?>

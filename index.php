@@ -5,7 +5,7 @@ session_start();
 
 require('./templates/login-check.php');
 
-$title = "車診断 トップページ";
+$title = "クルシラ トップページ";
 require ('./templates/layout.php');
 ?>
 <body class="body">
@@ -15,8 +15,8 @@ require ('./templates/layout.php');
 
   <main class="index-main">
     <div class="index-main__trouble">
-      <p class="index-main__trouble__title">車に一目惚れしよう</p>
-      <p class="index-main__trouble__explanation">この世にある車全てを<br>把握できている人はどのくらいいるでしょうか。<br>まだあなたはトキメク車に出会っていないかもしれません。</p>
+      <p class="index-main__trouble__title">好きな車を見つけよう</p>
+      <!-- <p class="index-main__trouble__explanation">この世にある車全てを<br>把握できている人はどのくらいいるでしょうか。<br>まだあなたはトキメク車に出会っていないかもしれません。</p> -->
       <p class="index-main__trouble__contents">どんな車があるの？<br>車が欲しいけど調べ方がわからない...<br>特徴だけで探したい！</p>
     </div>
     <div class="index-main__search">

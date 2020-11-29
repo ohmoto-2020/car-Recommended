@@ -61,7 +61,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 // var_dump($totalCars);
 
 
-$title = "車診断 結果";
+$title = "クルシラ 結果";
 require ('./templates/layout.php');
 ?>
 <body class="result-body">
@@ -72,8 +72,8 @@ require ('./templates/layout.php');
   <main class="result-main">
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
-        <p>メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
-        <p>車種名:<?php echo $outer[0]->{'model'} ?></p>
+        <p class="maker">メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
+        <p class="car-name">車種名:<?php echo $outer[0]->{'model'} ?></p>
         <div class="slider">
         <?php foreach ($outer as $loop): ?>
           <div class="oneCar">

@@ -3,7 +3,7 @@
 $count = $db->query('SELECT COUNT(*) FROM members');
 ?>
 <div class="header__container">
-  <h1>好きな車を見つけよう</h1>
+  <h1><a href="index.php" class="header-link">クルシラ</a></h1>
   <button class="header__container__hamburger" onclick="toggle()">
     <span></span>
   </button>

@@ -5,7 +5,7 @@ session_start();
 
 require('./templates/login-check.php');
 
-$title = "車診断 このサイトについて";
+$title = "このサイトについて";
 require ('./templates/layout.php');
 ?>
 
