@@ -8,7 +8,7 @@ if ($_COOKIE['email'] != '') {
   $_POST['password'] = $_COOKIE['password'];
 }
 
-$error = '';
+// $error = '';
 if (!empty($_POST)) {
 // ログインの処理
   if ($_POST['email'] != '' && $_POST['password'] != '') {
@@ -57,11 +57,11 @@ require ('./templates/layout.php');
           <li>
             <label for="email" class="user-info">メールアドレス:</label>
             <input type="email" class="user-info" name="email" value="
-            <?php empty($POST['email']) ? print htmlspecialchars($_POST['email'], ENT_QUOTES):''; ?>">
+            <?php !empty($POST['email']) ? print htmlspecialchars($_POST['email'], ENT_QUOTES):''; ?>">
           </li>
           <li>
             <label for="password" class="user-info">パスワード:</label>
-            <input type="password" class="user-info" name="password" value="<?php empty($POST['email']) ? print htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
+            <input type="password" class="user-info" name="password" value="<?php !empty($POST['email']) ? print htmlspecialchars($_POST['password'], ENT_QUOTES):''; ?>">
           </li>
         </ul>
         <?php if ($error['login'] == 'blank'): ?>
