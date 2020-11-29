@@ -8,6 +8,7 @@ if ($_COOKIE['email'] != '') {
   $_POST['password'] = $_COOKIE['password'];
 }
 
+$error = '';
 if (!empty($_POST)) {
 // ログインの処理
   if ($_POST['email'] != '' && $_POST['password'] != '') {
