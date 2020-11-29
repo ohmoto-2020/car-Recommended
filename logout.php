@@ -10,8 +10,8 @@ if(ini_get("session.use_cookies")){
 session_destroy();
 
 //Cookie情報も削除
-setcookie('email','', time() - 3600);
-setcookie('password','', time() - 3600);
+setcookie('email','', time() - 60*60*24*14);
+setcookie('password','', time() - 60*60*24*14);
 
 header('Location: login.php');
 exit();
