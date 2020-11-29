@@ -64,7 +64,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 $title = "クルシラ 結果";
 require ('./templates/layout.php');
 ?>
-<body class="result-body">
+<body class="special-body">
   <header class="header">
     <?php require('templates/home-header.php'); ?>
   </header>
