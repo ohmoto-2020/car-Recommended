@@ -67,9 +67,6 @@ a {
     .header__container h1 {
       font-size: 5vw;
       letter-spacing: 0.5rem; }
-      @media screen and (min-width: 540px) {
-        .header__container h1 {
-          font-size: 3rem; } }
     .header__container .header-link {
       color: #fff !important; }
     .header__container__hamburger {
@@ -311,10 +308,11 @@ a {
     margin: 0 20px;
     font-size: 2rem;
     border-bottom: 4px solid #078080; }
-  .result-main .maker {
-    margin-top: 3rem; }
   .result-main .car-name {
+    margin-top: 3rem;
     font-size: 1.3rem; }
+  .result-main .car-price {
+    margin-bottom: 1rem; }
   .result-main .slider {
     width: 80%;
     margin: 0 auto; }

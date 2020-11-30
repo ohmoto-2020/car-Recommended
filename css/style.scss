@@ -51,9 +51,6 @@
     h1 {
       font-size: 5vw;
       letter-spacing: 0.5rem;
-      @include tab-layout() {
-        font-size: 3rem;
-      }
     }
     .header-link {
       color: $main-color !important;
@@ -305,11 +302,12 @@
     font-size: 2rem;
     border-bottom: 4px solid rgb(7, 128, 128);
   }
-  .maker {
-    margin-top: 3rem;
-  }
   .car-name {
+    margin-top: 3rem;
     font-size: 1.3rem;
+  }
+  .car-price {
+    margin-bottom: 1rem;
   }
   .slider {
     width: 80%;

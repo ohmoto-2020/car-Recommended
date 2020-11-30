@@ -34,9 +34,9 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 
   $brand = htmlspecialchars($sqlCar['maker']);//メーカー
   $model = htmlspecialchars($sqlCar['name']); //車種名
-  $price = htmlspecialchars($sqlCar['price']); //車種名
+  $price = htmlspecialchars($sqlCar['price']); //価格
   //リクエストURLを組み立て
-  $url = "$baseurl?key=$key&brand=$brand&model=$model&count=20";
+  $url = "$baseurl?key=$key&brand=$brand&model=$model&count=40";
 
   //XMLパース
   $apiCars = simplexml_load_file($url)->{'usedcar'};
@@ -71,8 +71,8 @@ require ('./templates/layout.php');
   <main class="result-main">
     <h2>あなたにおすすめの車は</h2>
       <?php foreach ($totalCars as $outer): ?>
-        <p class="maker">メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
         <p class="car-name">車種名:<?php echo $outer[0]->{'model'} ?></p>
+        <p class="maker">メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
         <p class="car-price">価格:<?php echo $outer[0]['sqlPrice']; ?>万円</p>
         <div class="slider">
         <?php foreach ($outer as $loop): ?>
