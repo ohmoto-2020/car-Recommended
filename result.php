@@ -1,9 +1,8 @@
 <?php
-ini_set('display_errors', '1');
 require('./templates/config.php');
 session_start();
-
 require('./templates/login-check.php');
+
 
 //フォーム情報
 $search_style = $_POST["style"];
@@ -22,7 +21,6 @@ $stmh->bindValue(':uses', $search_uses, PDO::PARAM_STR);
 $stmh->execute();
 
 
-
 //API
 //ベースURL
 $baseurl = "http://webservice.recruit.co.jp/carsensor/usedcar/v1/";
@@ -36,9 +34,9 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 
   $brand = htmlspecialchars($sqlCar['maker']);//メーカー
   $model = htmlspecialchars($sqlCar['name']); //車種名
-
+  $price = htmlspecialchars($sqlCar['price']); //車種名
   //リクエストURLを組み立て
-  $url = "$baseurl?key=$key&brand=$brand&model=$model&count=30";
+  $url = "$baseurl?key=$key&brand=$brand&model=$model&count=20";
 
   //XMLパース
   $apiCars = simplexml_load_file($url)->{'usedcar'};
@@ -49,6 +47,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
     //車種名の完全一致
     if ($apiCar->{'model'} == $sqlCar['name']) {
       //一致した車を配列に入れる
+      $apiCar['sqlPrice'] = $price;
       $filteredCars[] = $apiCar;
     }
   }
@@ -74,11 +73,12 @@ require ('./templates/layout.php');
       <?php foreach ($totalCars as $outer): ?>
         <p class="maker">メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
         <p class="car-name">車種名:<?php echo $outer[0]->{'model'} ?></p>
+        <p class="car-price">価格:<?php echo $outer[0]['sqlPrice']; ?>万円</p>
         <div class="slider">
         <?php foreach ($outer as $loop): ?>
           <div class="oneCar">
             <ul>
-              <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>"></li>
+              <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'s'}; ?>"></li>
             </ul>
           </div>
         <?php endforeach; ?>

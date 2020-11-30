@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', '1');//本番環境では0
-error_reporting(E_ALL);//本番環境ではコメントアウト
 require('./templates/config.php');
 session_start();
 

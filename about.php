@@ -1,8 +1,6 @@
 <?php
-ini_set('display_errors', '1');
 require('./templates/config.php');
 session_start();
-
 require('./templates/login-check.php');
 
 $title = "このサイトについて";
