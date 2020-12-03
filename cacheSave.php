@@ -1,7 +1,7 @@
 <?php
 try {
-  $db = new PDO('mysql:dbname=portfolio;host=localhost;charset=utf8','hogeUser', 'hogehoge');
-  // $db = new PDO('mysql:dbname=heroku_91efeffca456bdc;host=us-cdbr-east-02.cleardb.com;charset=utf8','b6751ea5554297', '8e31b3b1');
+  // $db = new PDO('mysql:dbname=portfolio;host=localhost;charset=utf8','hogeUser', 'hogehoge');
+  $db = new PDO('mysql:dbname=heroku_91efeffca456bdc;host=us-cdbr-east-02.cleardb.com;charset=utf8','b6751ea5554297', '8e31b3b1');
 
   $sql = "SELECT * FROM cars";
 
