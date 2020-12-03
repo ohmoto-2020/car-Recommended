@@ -75,7 +75,7 @@ a {
       width: 30px;
       height: 17px;
       right: 20px;
-      top: 12px;
+      top: 15px;
       cursor: pointer;
       background-color: #078080; }
       .header__container__hamburger span {
@@ -122,7 +122,7 @@ a {
         color: red;
         cursor: pointer; }
       .header__container ul li {
-        padding-top: 1rem;
+        padding-top: 2rem;
         font-size: 0.7rem; }
         .header__container ul li a:hover {
           color: red;

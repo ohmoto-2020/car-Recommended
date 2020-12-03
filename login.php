@@ -64,7 +64,7 @@ require ('./templates/layout.php');
           </li>
         </ul>
         <?php if (isset($error['login']) && $error['login'] ==  'blank'): ?>
-          <p class="error">メールアドレスとパスワードをご記入ください</p>
+          <p class="error">メールアドレスとパスワードを<br>ご記入ください</p>
         <?php endif; ?>
         <?php if (isset($error['login']) && $error['login'] == 'failed'): ?>
           <p class="error">ログインに失敗しました。正しくご記入ください。</p>
