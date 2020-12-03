@@ -123,7 +123,7 @@ a {
         cursor: pointer; }
       .header__container ul li {
         padding-top: 1rem;
-        font-size: 1rem; }
+        font-size: 0.7rem; }
         .header__container ul li a:hover {
           color: red;
           -webkit-transition: 0.4s;
@@ -175,51 +175,24 @@ a {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        @media screen and (min-width: 1001px) {
-          .info-main__container__form li {
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            margin-top: 1rem; } }
         .info-main__container__form li label {
           margin-top: 1rem; }
-          @media screen and (min-width: 1001px) {
-            .info-main__container__form li label {
-              width: 35%;
-              margin-top: 0;
-              text-align: right; } }
-        @media screen and (min-width: 1001px) {
-          .info-main__container__form li input {
-            width: 60%; } }
       .info-main__container__form .user-info {
         font-size: 6vw; }
-        @media screen and (min-width: 1001px) {
-          .info-main__container__form .user-info {
-            font-size: 2rem; } }
       .info-main__container__form__button {
         letter-spacing: 3px;
         font-size: 4vw;
         width: 45%;
         margin-top: 1rem;
         padding: 0.5rem; }
-        @media screen and (min-width: 1001px) {
-          .info-main__container__form__button {
-            font-size: 2rem;
-            width: 30%; } }
     .info-main__container .error {
       color: red;
-      font-size: 1vw;
+      font-size: 1rem;
       font-weight: bold; }
-      @media screen and (min-width: 540px) {
-        .info-main__container .error {
-          font-size: 2.8vw; } }
-      @media screen and (min-width: 1001px) {
-        .info-main__container .error {
-          font-size: 1.5rem; } }
 
 .index-main {
   width: 100%;
+  padding-top: 5rem;
   text-align: center; }
   .index-main__trouble {
     margin-top: 2rem;

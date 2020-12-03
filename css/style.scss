@@ -95,7 +95,7 @@
       }
       li {
         padding-top: 1rem;
-        font-size: 1rem;
+        font-size: 0.7rem;
         a:hover {
           color: red;
           transition: 0.4s;
@@ -145,29 +145,12 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        @include pc-layout() {
-          flex-direction: row;
-          margin-top: 1rem;
-        }
         label {
           margin-top: 1rem;
-          @include pc-layout() {
-            width: 35%;
-            margin-top: 0;
-            text-align: right;
-          }
-        }
-        input {
-          @include pc-layout() {
-            width: 60%;
-          }
         }
       }
       .user-info {
         font-size: 6vw;
-        @include pc-layout() {
-          font-size: 2rem;
-        }
       }
       &__button {
         letter-spacing: 3px;
@@ -175,22 +158,12 @@
         width: 45%;
         margin-top: 1rem;
         padding: 0.5rem;
-        @include pc-layout() {
-          font-size: 2rem;
-          width: 30%;
-        }
       }
     }
     .error {
       color: red;
-      font-size: 1vw;
+      font-size: 1rem;
       font-weight: bold;
-      @include tab-layout() {
-        font-size: 2.8vw;
-      }
-      @include pc-layout() {
-        font-size: 1.5rem;
-      }
     }
   }
 }
@@ -199,6 +172,7 @@
 // ================================
 .index-main {
   width: 100%;
+  padding-top: 5rem;
   text-align: center;
   &__trouble {
     margin-top: 2rem;
