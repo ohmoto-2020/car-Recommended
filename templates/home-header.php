@@ -18,7 +18,7 @@ $count = $db->query('SELECT COUNT(*) FROM members');
       <li><a href="login.php">ログイン</a></li>
       <?php endif; ?>
       <li><a href="about.php">このサイトについて</a></li>
-      <li onclick="toggle()">Close</li>
+      <li onclick="toggle()" class="close">Close</li>
     </ul>
   </div>
 </div>

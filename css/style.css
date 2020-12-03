@@ -115,7 +115,7 @@ a {
       list-style: none; }
       .header__container ul .welcom {
         padding-top: 4rem; }
-      .header__container ul :nth-child(5) {
+      .header__container ul .close {
         font-size: 1.5rem;
         margin-top: 10rem;
         padding-bottom: 2rem;
