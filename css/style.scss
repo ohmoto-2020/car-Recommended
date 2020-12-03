@@ -95,7 +95,7 @@
       }
       li {
         padding-top: 1rem;
-        font-size: 0.5vw;
+        font-size: 1rem;
         a:hover {
           color: red;
           transition: 0.4s;
@@ -199,8 +199,6 @@
 // ================================
 .index-main {
   width: 100%;
-  position: fixed;
-  top: 10%;
   text-align: center;
   &__trouble {
     margin-top: 2rem;

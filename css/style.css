@@ -123,7 +123,7 @@ a {
         cursor: pointer; }
       .header__container ul li {
         padding-top: 1rem;
-        font-size: 0.5vw; }
+        font-size: 1rem; }
         .header__container ul li a:hover {
           color: red;
           -webkit-transition: 0.4s;
@@ -220,8 +220,6 @@ a {
 
 .index-main {
   width: 100%;
-  position: fixed;
-  top: 10%;
   text-align: center; }
   .index-main__trouble {
     margin-top: 2rem;
