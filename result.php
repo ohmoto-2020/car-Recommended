@@ -89,6 +89,7 @@ require ('./templates/layout.php');
 
   <main class="result-main">
     <h2>あなたにおすすめの車は</h2>
+    <?php if(isset($totalCars)): ?>
       <?php foreach ($totalCars as $outer): ?>
         <p class="car-name">車種名:<?php echo $outer[0]->{'model'} ?></p>
         <p class="maker">メーカー:<?php echo $outer[0]->{'brand'}->{'name'} ?></p>
@@ -103,6 +104,9 @@ require ('./templates/layout.php');
         <?php endforeach; ?>
         </div>
       <?php endforeach; ?>
+    <?php else : ?>
+      <p class="not-find">該当する車は見つかりませんでした</p>
+    <?php endif; ?>
     <a href="./select.php">
       <div class="search">RESTART</div>
     </a>
