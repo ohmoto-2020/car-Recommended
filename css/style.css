@@ -349,13 +349,19 @@ a {
 
 .about-main {
   margin: 0 1rem; }
-  .about-main__container__title {
-    font-size: 2rem;
-    padding-top: 6rem;
-    padding-bottom: 2rem;
-    text-align: center; }
-  .about-main__container__box__subTitle {
-    font-size: 1.3rem; }
+  .about-main__container {
+    margin: 1rem; }
+    .about-main__container__title {
+      font-size: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+      text-align: center; }
+    .about-main__container__box {
+      margin-bottom: 1rem; }
+      .about-main__container__box__subTitle {
+        font-size: 1.3rem; }
+      .about-main__container__box__text {
+        list-style-position: inside; }
 
 footer {
   height: 70px;

@@ -354,6 +354,7 @@
 .about-main {
   margin: 0 1rem;
   &__container {
+    margin: 1rem;
     &__title {
       font-size: 2rem;
       padding-top: 6rem;
@@ -361,11 +362,12 @@
       text-align: center;
     }
     &__box {
+      margin-bottom: 1rem;
       &__subTitle {
         font-size: 1.3rem;
       }
       &__text {
-
+        list-style-position: inside;
       }
     }
   }

@@ -17,7 +17,7 @@ require ('./templates/layout.php');
       <p class="about-main__container__title">このサイトについて</p>
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;制作背景&gt;</p>
-        <p class="about-main__container__box__text">このアプリを制作しようと思った理由は、近年の「若者の車離れ」という原因の一つに<strong>「一目惚れするような車に出会えていない」</strong>という問題があるからではないか、と考えたからです。<br>
+        <p class="about-main__container__box__text">このアプリを制作しようと思った理由は、近年の「若者の車離れ」という原因の一つに<u>「一目惚れするような車に出会えていない」</u>という問題があるからではないか、と考えたからです。<br>
         </p>
       </div>
       <div class="about-main__container__box">
@@ -26,10 +26,10 @@ require ('./templates/layout.php');
       </div>
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;注意&gt;</p>
-        <ul>
-          <li>このサイトの「結果」には個人差がありますので、<br>ご了承ください。</li>
-          <li>会員登録していただく意味は特にありません。<br>ですが、ご利用していただいた人数をメニューに出力し、ユーザーからも把握できるため、登録していただけると嬉しいです。</li>
-          <li></li>
+        <ul class="about-main__container__box__text">
+          <li>このサイトの<u>「結果」には個人差があります</u>ので、ご了承ください。</li>
+          <li>会員登録していただく意味は特にありませんが、ご利用していただいた人数をメニューに出力し、ユーザーからも把握できるため、登録していただけると嬉しいです。</li>
+          <li>スマホサイズのみの対応となっていますので、PCやタブレットではうまく表示されません。</li>
         </ul>
       </div>
     </div>
