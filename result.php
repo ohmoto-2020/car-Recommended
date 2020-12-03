@@ -57,9 +57,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
     file_put_contents($file_name,$xmlStrings);
   }
 
-
   $apiCars = $xml->{'usedcar'};//取ってきたオブジェクトの車情報をとる
-
 
 
   $filteredCars = array();
@@ -108,6 +106,7 @@ require ('./templates/layout.php');
     <a href="./select.php">
       <div class="search">RESTART</div>
     </a>
+    <p class="provider">【画像提供：カーセンサー 】</p>
   </main>
 
 

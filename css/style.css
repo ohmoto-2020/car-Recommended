@@ -309,7 +309,7 @@ a {
     font-size: 2rem;
     border-bottom: 4px solid #078080; }
   .result-main .car-name {
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-size: 1.3rem; }
   .result-main .car-price {
     margin-bottom: 1rem; }
@@ -335,7 +335,7 @@ a {
     width: 80%;
     height: 40px;
     text-align: center;
-    margin: 5rem auto;
+    margin: 5rem auto 3rem;
     font-size: 1.6rem;
     font-weight: bold;
     color: #000;
@@ -346,6 +346,8 @@ a {
       background-color: rgba(255, 238, 0, 0.9);
       -webkit-transition: 0.2s;
       transition: 0.2s; }
+  .result-main .provider {
+    margin-bottom: 1rem; }
 
 .about-main {
   margin: 0 1rem; }

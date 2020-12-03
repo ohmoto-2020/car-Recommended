@@ -303,7 +303,7 @@
     border-bottom: 4px solid rgb(7, 128, 128);
   }
   .car-name {
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-size: 1.3rem;
   }
   .car-price {
@@ -333,7 +333,7 @@
     width: 80%;
     height: 40px;
     text-align: center;
-    margin: 5rem auto;
+    margin: 5rem auto 3rem;
     font-size: 1.6rem;
     font-weight: bold;
     color: $sub-color;
@@ -344,6 +344,9 @@
       background-color: rgba(255, 238, 0, 0.9);
       transition: 0.2s;
     }
+  }
+  .provider {
+    margin-bottom: 1rem;
   }
 }
 
