@@ -22,15 +22,27 @@ require ('./templates/layout.php');
       </div>
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;制作背景&gt;</p>
-        <p class="about-main__container__box__text">このアプリを制作しようと思った理由は、近年の「若者の車離れ」という原因の一つに<u>「一目惚れするような車に出会えていない」</u>という問題があるからではないか、と考えたからです。<br>車を調べるときは、メーカーや車種などをあらかじめわかっていないと調べるのは困難です。そのため、車の「見た目・サイズ・国産もしくは外車・用途」といった観点から車を探せるアプリを制作しました。
+        <p class="about-main__container__box__text">このアプリを制作しようと思った理由は、近年の「若者の車離れ」という原因の一つに<u>「一目惚れするような車に出会えていない」</u>という問題があるからではないか、と考えたからです。<br>車を調べるときは、メーカーや車種などをあらかじめ分かっていないと調べるのは困難です。そのため、車の「見た目・サイズ・国産もしくは外車・用途」といった観点から車を探せるアプリを制作しました。
         </p>
       </div>
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;アプリの特徴&gt;</p>
         <ul class="about-main__container__box__text">
-          <li>PHPの基礎力を高めたいと思っていたため、フレームワークは使っていません。</li>
+          <li>PHPの基礎力向上のため、フレームワークは使っていません。</li>
           <li>デプロイ先はHerokuです。</li>
           <li>外部APIの情報をキャッシュファイルにいれています。そのキャッシュファイルは1日1回「Heroku Scheduler」で自動更新するようにしています。 </li>
+          <li>搭載機能は、ログイン・新規登録・検索・外部APIからの情報取得・キャッシュデータ自動更新です。</li>
+          <li>使用言語は、HTML/CSS/JavaScript/jQuery/PHP/SQLです。</li>
+        </ul>
+      </div>
+      <div class="about-main__container__box">
+        <p class="about-main__container__box__subTitle">&lt;未実装&gt;</p>
+        <ul class="about-main__container__box__text">
+          <li>ページネーション</li>
+          <li>ソーシャルログイン</li>
+          <li>履歴表示</li>
+          <li>結果のシェア</li>
+          <li>デプロイ先をAWS</li>
         </ul>
       </div>
       <div class="about-main__container__box">
