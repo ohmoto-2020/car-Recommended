@@ -286,7 +286,7 @@
     margin-bottom: 1rem;
   }
   .slider {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     .oneCar {
       width: 100%;
@@ -310,7 +310,7 @@
   .search {
     user-select: none;
     display: block;
-    width: 80%;
+    width: 70%;
     height: 40px;
     text-align: center;
     margin: 5rem auto 3rem;
@@ -353,6 +353,9 @@
         list-style-position: inside;
       }
     }
+  }
+  .link {
+    margin-top: 4rem;
   }
 }
 
