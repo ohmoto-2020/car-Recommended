@@ -27,9 +27,6 @@ $baseurl = "http://webservice.recruit.co.jp/carsensor/usedcar/v1/";
 //リクエストパラメータ
 $key = '277fa2e16d8a6ebb'; // あなたのAPIキー
 
-$max = 5; //コンテンツの最大数
-$contents = array();
-$totalCars = array();
 //該当車種分繰り返す(SQL)
 while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 
@@ -40,18 +37,30 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
   $url = "$baseurl?key=$key&brand=$brand&model=$model&count=40";
 
 
-  $file_name = "./cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル作成
+  $file_name = "./cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
 
-  //$file_name名のキャッシュファイルが存在するか否か
+  // $file_name名のキャッシュファイルが存在するか否か
   if(is_file($file_name)){
-    $xmlStrings = file_get_contents($file_name);//保存されたキャッシュファイルを取ってくる
+    // 最終取得から10時間経っているか
+    if(time() - filectime($file_name) >= 60*60*10) {
+    $xmlStrings = file_get_contents($url);//リクエストURLの文字列をAPIから取ってくる
+    $xml = simplexml_load_string($xmlStrings);//文字列をオブジェクト化(xml化)
+
+    file_put_contents($file_name,$xmlStrings);//$file_name名で中身を$xmlStringsとしてキャッシュファイルを作る
+    } else {
+      $xmlStrings = file_get_contents($file_name);//保存されたキャッシュファイルを取ってくる
+      $xml = simplexml_load_string($xmlStrings);
+    }
   } else {
-    $xmlStrings = file_get_contents($url);//リクエストURLの文字列を取ってくる
+    $xmlStrings = file_get_contents($url);
+    $xml = simplexml_load_string($xmlStrings);
+    file_put_contents($file_name,$xmlStrings);
   }
-  $xml = simplexml_load_string($xmlStrings);//xmlをオブジェクト化
+
+
   $apiCars = $xml->{'usedcar'};//取ってきたオブジェクトの車情報をとる
 
-  file_put_contents($file_name,$xmlStrings);//$file_name名で中身を$xmlStringsとしてキャッシュファイルを作る
+
 
   $filteredCars = array();
   //該当車種の台数分繰り返す(API)
@@ -90,7 +99,7 @@ require ('./templates/layout.php');
         <?php foreach ($outer as $loop): ?>
           <div class="oneCar">
             <ul>
-              <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'s'}; ?>"></li>
+              <li><img src="<?php echo $loop->{'photo'}->{'main'}->{'l'}; ?>"></li>
             </ul>
           </div>
         <?php endforeach; ?>
