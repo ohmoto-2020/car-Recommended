@@ -233,13 +233,16 @@ a {
 .select-main {
   color: #fff;
   margin: 1rem; }
+  .select-main .try {
+    color: #fff;
+    padding-top: 4rem; }
   .select-main__container {
-    padding-top: 7rem; }
+    padding-top: 5rem; }
     .select-main__container__box {
       padding: 1rem;
       border: solid 5px #fff; }
       .select-main__container__box__item {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

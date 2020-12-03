@@ -13,6 +13,7 @@ require ('./templates/layout.php');
 
   <main>
     <div class="select-main">
+      <p class="try">個人差があります。<br>様々なパターンを試してみてください。</p>
       <form action="result.php" class="select-main__container" method="POST">
         <div class="select-main__container__box">
           <div class="select-main__container__box__item">

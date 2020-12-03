@@ -222,13 +222,17 @@
 .select-main {
   color: $main-color;
   margin: 1rem;
+  .try {
+    color: $main-color;
+    padding-top: 4rem;
+  }
   &__container {
-    padding-top: 7rem;
+    padding-top: 5rem;
     &__box {
       padding: 1rem;
       border: solid 5px $main-color;
       &__item {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         display: flex;
         text-align: right;
         &__title {
