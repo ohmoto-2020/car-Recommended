@@ -17,7 +17,7 @@ require ('./templates/layout.php');
       <p class="about-main__container__title">このサイトについて</p>
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;はじめに&gt;</p>
-        <p class="about-main__container__box__text">このアプリは<u>12月16日</u>で使用できなくなります。車の情報元である「カーセンサー Webサービス」がサービスを終了してしまうためです。<br>ポートフォリオとして使用する予定でしたがこのような結果になってしまったので、サービス終了までにYoutube・Qiita・Githubへのアウトプットをしようと思っています。<br>
+        <p class="about-main__container__box__text">このアプリは<u>12月16日</u>でご利用ができなくなります。車の情報元である「カーセンサー Webサービス」がサービスを終了してしまうためです。<br>ポートフォリオとして使用する予定でしたがこのような結果になってしまったので、サービス終了までにYoutube・Qiita・Githubへのアウトプットをしようと思っています。<br>
         </p>
       </div>
       <div class="about-main__container__box">
@@ -29,8 +29,8 @@ require ('./templates/layout.php');
         <p class="about-main__container__box__subTitle">&lt;アプリの特徴&gt;</p>
         <ul class="about-main__container__box__text">
           <li>PHPの基礎力向上のため、フレームワークは使っていません。</li>
-          <li>デプロイ先はHerokuです。</li>
-          <li>外部APIの情報をキャッシュファイルにいれています。そのキャッシュファイルは1日1回「Heroku Scheduler」で自動更新するようにしています。 </li>
+          <li>デプロイ先はAWS EC2です。</li>
+          <li>外部APIの情報をキャッシュファイルにいれています。そのキャッシュファイルは1日1回自動更新するようにしています。 </li>
           <li>搭載機能は、ログイン・新規登録・検索・外部APIからの情報取得・キャッシュデータ自動更新です。</li>
           <li>使用言語は、HTML/CSS/JavaScript/jQuery/PHP/SQLです。</li>
         </ul>
