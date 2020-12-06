@@ -28,6 +28,7 @@ require ('./templates/layout.php');
       <div class="about-main__container__box">
         <p class="about-main__container__box__subTitle">&lt;アプリの特徴&gt;</p>
         <ul class="about-main__container__box__text">
+          <li>車データ数351台</li>
           <li>PHPの基礎力向上のため、フレームワークは使っていません。</li>
           <li>デプロイ先はAWS EC2です。</li>
           <li>外部APIの情報をキャッシュファイルにいれています。そのキャッシュファイルは1日1回自動更新するようにしています。 </li>
@@ -42,7 +43,6 @@ require ('./templates/layout.php');
           <li>ソーシャルログイン</li>
           <li>履歴表示</li>
           <li>結果のシェア</li>
-          <li>デプロイ先をAWS</li>
         </ul>
       </div>
       <div class="about-main__container__box">
