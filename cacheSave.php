@@ -23,7 +23,7 @@ try {
     $url = "$baseurl?key=$key&brand=$brand&model=$model&count=40";
 
 
-    $file_name = "./cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
+    $file_name = "/var/www/html/cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
 
 
     $xmlStrings = file_get_contents($url);//リクエストURLの文字列をAPIから取ってくる
