@@ -84,18 +84,20 @@
       text-align: center;
       list-style: none;
       .welcom {
-        padding-top: 4rem;
+        padding-top: 1rem;
+        font-size: 1rem;
+        color: rgb(10,184,183);
+        margin-bottom: 3rem;
       }
       .close {
-        font-size: 1.5rem;
-        margin-top: 10rem;
+        font-size: 2rem;
         padding-bottom: 2rem;
         color: red;
         cursor: pointer;
       }
       li {
-        padding-top: 2rem;
-        font-size: 0.7rem;
+        padding-top: 3.5rem;
+        font-size: 1.3rem;
         a:hover {
           color: red;
           transition: 0.4s;
@@ -112,9 +114,10 @@
       z-index: 10;
       top: 0px;
       right: 0px;
-      width: 110px;
+      width: 200px;
       height: 100%;
-      background-color: rgb(255, 255, 255);
+      transition: all 0.4s ease-out;
+      background-color: rgba(255, 255, 255,0.9);
       box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.3);
     }
   }

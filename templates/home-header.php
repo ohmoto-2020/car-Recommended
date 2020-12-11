@@ -10,7 +10,6 @@ $count = $db->query('SELECT COUNT(*) FROM members');
   <div id="hum" class="hide">
     <ul>
       <li class="welcom">登録人数:<?php echo $count->fetchColumn(); ?>人</li>
-      <li><a href="index.php">ホームへ</a></li>
       <?php if(!empty($member["name"])) :?>
       <li>ようこそ<br><?php echo htmlspecialchars($member["name"], ENT_QUOTES); ?>さん</li>
       <li><a href="logout.php">ログアウト</a></li>

@@ -114,16 +114,18 @@ a {
       text-align: center;
       list-style: none; }
       .header__container ul .welcom {
-        padding-top: 4rem; }
+        padding-top: 1rem;
+        font-size: 1rem;
+        color: #0ab8b7;
+        margin-bottom: 3rem; }
       .header__container ul .close {
-        font-size: 1.5rem;
-        margin-top: 10rem;
+        font-size: 2rem;
         padding-bottom: 2rem;
         color: red;
         cursor: pointer; }
       .header__container ul li {
-        padding-top: 2rem;
-        font-size: 0.7rem; }
+        padding-top: 3.5rem;
+        font-size: 1.3rem; }
         .header__container ul li a:hover {
           color: red;
           -webkit-transition: 0.4s;
@@ -137,9 +139,11 @@ a {
       z-index: 10;
       top: 0px;
       right: 0px;
-      width: 110px;
+      width: 200px;
       height: 100%;
-      background-color: white;
+      -webkit-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out;
+      background-color: rgba(255, 255, 255, 0.9);
       -webkit-box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.3);
               box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.3); }
 
