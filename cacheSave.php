@@ -25,7 +25,6 @@ try {
 
     $file_name = "/var/www/html/cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
 
-
     $xmlStrings = file_get_contents($url);//リクエストURLの文字列をAPIから取ってくる
     $xml = simplexml_load_string($xmlStrings);//文字列をオブジェクト化(xml化)
 
