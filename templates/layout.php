@@ -10,5 +10,6 @@
   <link rel="stylesheet" href="./css/slick-theme.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
   <title><?= $title ?></title>
 </head>
