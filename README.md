@@ -16,7 +16,7 @@ Youtube:https://youtu.be/SahckyFFlu4
 そのため、車の「見た目・サイズ・国産もしくは外車・用途」といった点から車を探せるアプリを制作しました。  
 
 ## 使用画面のイメージ
-<img width="1001" alt="スクリーンショット 2020-12-07 17 22 41" src="https://user-images.githubusercontent.com/71020018/101895726-42dc0180-3beb-11eb-826e-b73b73fda8b6.png">
+<img width="1004" alt="スクリーンショット 2020-12-12 12 34 26" src="https://user-images.githubusercontent.com/71020018/101971670-86c81880-3c76-11eb-9195-77ee6480c7d5.png">
 
 
 ## 機能
