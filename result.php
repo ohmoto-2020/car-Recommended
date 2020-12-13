@@ -43,12 +43,12 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
   // if(is_file($file_name)){
   //   // 最終取得から10時間経っているか
   //   if(time() - filectime($file_name) >= 60*60*10) {
-  //   $xmlStrings = file_get_contents($url);//リクエストURLの文字列をAPIから取ってくる
-  //   $xml = simplexml_load_string($xmlStrings);//文字列をオブジェクト化(xml化)
+  //   $xmlStrings = file_get_contents($url);//リクエストURLの文字列(xml)をAPIから取ってくる
+  //   $xml = simplexml_load_string($xmlStrings);
 
   //   file_put_contents($file_name,$xmlStrings);//$file_name名で中身を$xmlStringsとしてキャッシュファイルを作る
   //   } else {
-  //     $xmlStrings = file_get_contents($file_name);//保存されたキャッシュファイルを取ってくる
+  //     $xmlStrings = file_get_contents($file_name);
   //     $xml = simplexml_load_string($xmlStrings);
   //   }
   // } else {
@@ -57,7 +57,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
   //   file_put_contents($file_name,$xmlStrings);
   // }
   $xmlStrings = file_get_contents($file_name);//保存されたキャッシュファイルを取ってくる
-  $xml = simplexml_load_string($xmlStrings);
+  $xml = simplexml_load_string($xmlStrings);//文字列をオブジェクト化
   $apiCars = $xml->{'usedcar'};//取ってきたオブジェクトの車情報をとる
 
 
