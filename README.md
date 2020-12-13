@@ -37,7 +37,7 @@ Youtube:https://youtu.be/SahckyFFlu4
 * SQL  
 
 ### インフラ
-* AWS ( EC2, ALB, ACM, CloudFormation, Route53, VPC)
+* AWS ( EC2, ALB, ACM, CloudFormation, Route53)
 
 ## 苦労した点
 ### 検索結果の表示を早くする
