@@ -39,23 +39,6 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
 
   $file_name = "./cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
 
-  // $file_name名のキャッシュファイルが存在するか否か
-  // if(is_file($file_name)){
-  //   // 最終取得から10時間経っているか
-  //   if(time() - filectime($file_name) >= 60*60*10) {
-  //   $xmlStrings = file_get_contents($url);//リクエストURLの文字列(xml)をAPIから取ってくる
-  //   $xml = simplexml_load_string($xmlStrings);
-
-  //   file_put_contents($file_name,$xmlStrings);//$file_name名で中身を$xmlStringsとしてキャッシュファイルを作る
-  //   } else {
-  //     $xmlStrings = file_get_contents($file_name);
-  //     $xml = simplexml_load_string($xmlStrings);
-  //   }
-  // } else {
-  //   $xmlStrings = file_get_contents($url);
-  //   $xml = simplexml_load_string($xmlStrings);
-  //   file_put_contents($file_name,$xmlStrings);
-  // }
   $xmlStrings = file_get_contents($file_name);//保存されたキャッシュファイルを取ってくる
   $xml = simplexml_load_string($xmlStrings);//文字列をオブジェクト化
   $apiCars = $xml->{'usedcar'};//取ってきたオブジェクトの車情報をとる
@@ -65,7 +48,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
   //該当車種の台数分繰り返す(API)
   foreach ($apiCars as $apiCar) {
     //車種名の完全一致
-    if ($apiCar->{'model'} == $sqlCar['name']) {
+    if ($apiCar->{'model'} == $model) {
       //一致した車を配列に入れる
       $apiCar['sqlPrice'] = $price;
       $filteredCars[] = $apiCar;
