@@ -34,7 +34,7 @@ while($sqlCar = $stmh->fetch(PDO::FETCH_ASSOC)){
   $model = htmlspecialchars($sqlCar['name']); //車種名
   $price = htmlspecialchars($sqlCar['price']); //価格
   //リクエストURLの組み立て
-  $url = "$baseurl?key=$key&brand=$brand&model=$model&count=40";
+  // $url = "$baseurl?key=$key&brand=$brand&model=$model&count=40";
 
 
   $file_name = "./cache/" . $brand . "_" . $model . ".selial";//キャッシュファイル名を作成
