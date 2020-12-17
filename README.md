@@ -41,6 +41,9 @@ Youtube:https://youtu.be/SahckyFFlu4
  ⚪︎ 上記の問題のため、キャッシュファイルの生成  
  ⚪︎ cronでキャッシュファイル生成を自動化  
 
+## AWS構成図
+
+
 ## 使用技術
 ### 使用言語
   ⚪︎ HTML  
@@ -52,8 +55,25 @@ Youtube:https://youtu.be/SahckyFFlu4
   ⚪︎ SQL  
 
 ### インフラ
-  ⚪︎ Heroku  
+  ⚪︎ Heroku (AWSに変更)  
   ⚪︎ AWS ( EC2, ALB, ACM, CloudFormation, Route53 )
+
+### その他
+  ⚪︎ Visual Studio Code  
+  ⚪︎ シェルスクリプト (Heroku)  
+  ⚪︎ cron  
+  ⚪︎ draw.io  
+
+## DB設計
+### ユーザー管理テーブル
+| id | name | email | password | created |
+|:---:|:---:|:---:|:---:|:---:|
+| 会員ID | ユーザーネーム | メールアドレス | パスワード | 登録日 |
+
+### 車情報のテーブル
+| id | name | maker | price | style | size | country | uses |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ID | 車種名 | メーカー | 価格 | 見た目 | 大きさ | 国 | 用途 |
 
 ## 苦労した点
 ### 検索結果の表示を早くする
