@@ -41,7 +41,8 @@ Youtube:https://youtu.be/SahckyFFlu4
  ⚪︎ 上記の問題のため、キャッシュファイルの生成  
  ⚪︎ cronでキャッシュファイル生成を自動化  
 
-## AWS構成図
+## サーバー構成図
+<img width="743" alt="スクリーンショット 2020-12-18 21 22 51" src="https://user-images.githubusercontent.com/71020018/102614265-446f7180-4177-11eb-976f-4b57d52901ab.png">
 
 
 ## 使用技術
