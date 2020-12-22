@@ -1,6 +1,6 @@
 # クルシラ
 特徴を選んでいただいて、好きな車を見つけていただけるアプリです。  
-URL:https://car-recommended.ml
+URL:https://car-recommended.ml　※現在ご利用できません（以下詳細）
 
 ## はじめに
 車の情報元である「カーセンサー Webサービス」がサービスを終了してしまうため、  
@@ -8,6 +8,7 @@ URL:https://car-recommended.ml
 そのため時間が足りず、未実装機能があります。
 動作説明の動画をYoutubeにアップしているので下記リンク先をご覧ください。  
 Youtube:https://youtu.be/SahckyFFlu4
+
 
 ## 制作背景
 近年の「若者の車離れ」という原因の一つに  
